@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=4 uid="uid://llv0dndov76q"]
+
+[ext_resource type="Script" uid="uid://d3rwcuqjni8t7" path="res://PlayerController/PlayerController.gd" id="1_kln2b"]
+[ext_resource type="SpriteFrames" uid="uid://sk8ffdouiv47" path="res://Tilemap/player.tres" id="2_rgh2o"]
+[ext_resource type="TileSet" uid="uid://deuafi81784pt" path="res://Tilemap/platforms.tres" id="3_pbw6q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5noq"]
+radius = 40.0
+height = 130.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_kln2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_b5noq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = ExtResource("2_rgh2o")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD+/wEAAQAAAAAAAAD//wEAAQAAAAAAAAAAAAEAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAADAAEAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAP//AQAAAAAAAAAGAP7/AQAAAAAAAAAFAP//AQAAAAAAAAAFAAAAAQAAAAAAAAAHAP7/AQAAAAAAAAAHAP//AQAAAAAAAAAHAAAAAQAAAAAAAAAHAAEAAQAAAAAAAAAIAAAAAQAAAAAAAAAIAAEAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAAAAQAAAAAAAAAIAP//AQAAAAAAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAAAAAALAAEAAQAAAAAAAAAMAAEAAQAAAAAAAAAMAAAAAQAAAAAAAAALAAAAAQAAAAAAAAACAAAAAQABAAAAAAAEAP//AQABAAAAAAAFAP7/AQABAAAAAAAIAP7/AQACAAAAAAAJAP//AQACAAAAAAANAAAAAQACAAAAAAANAAEAAQAAAAAAAAAOAAEAAQAAAAAAAAAPAAEAAQAAAAAAAAD9/wEAAQAAAAAAAAD8/wEAAQAAAAAAAAD7/wEAAQAAAAAAAAA=")
+tile_set = ExtResource("3_pbw6q")
+use_kinematic_bodies = true
