@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://gtv16vfaorrs" path="res://titleScreen/coollogo_com-11096818.png" id="1_0ftyr"]
 
 [node name="CoollogoCom-11096818" type="Sprite2D"]
-position = Vector2(794, 219)
+position = Vector2(566.75, 226)
+scale = Vector2(0.678799, 1.07071)
 texture = ExtResource("1_0ftyr")
