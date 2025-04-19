@@ -13,6 +13,7 @@ height = 130.0
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 floor_stop_on_slope = false
 script = ExtResource("1_kln2b")
+physics_set = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_b5noq")
